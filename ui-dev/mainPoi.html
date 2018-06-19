@@ -1,0 +1,75 @@
+
+ 
+    <div class="thumbnail" style="margin-right: 3px;margin-left: 3px;">
+       
+   <div class="row">
+   <div class="col-md-4"  style="padding-top: 3px; padding-left: 33px;"><h4 style="display: inline">Would you like to filter by Category?</h4>
+  <input type="checkbox" ng-model="checked" style="margin-left: 12px" aria-label="Toggle ngShow">
+</div>
+  <div class="col-md-2" style="padding-top: 5px">
+    <div class="form-group" ng-show="checked"> 
+        <select id="selectbasic" name="selectbasic" class="form-control" ng-model="selected">
+            <option  ng-repeat="x in categories" value={{x}}>{{x}}</option>
+        </select>  
+    </div>
+  </div>
+  <div class="col-md-3" style="padding-top: 3px">
+    <h4 ng-show="checkSelected() && checked" style="color: rgb(207, 207, 207)"> you have selected to fillter by {{selected}} </h4>
+  </div>
+  <div class="col-md-1"  style="padding-top: 8px">
+    <button type="button" class="btn btn-danger" ng-show="checkSelected() && checked" ng-click=getAllPOI()>Reset fillter</button>
+  </div>
+  <div class="col-md-1" >
+    </div>
+  <div class="col-md-1"  style="padding-top: 8px;margin-right:5px; ">
+    <button type="button" class="btn btn-info" ng-click=RankSort()>Rank Sort</button>
+  </div>
+
+
+
+
+    </div>
+    </div>
+  
+  <div class="thumbnail" style="margin-right: 3px;margin-left: 3px;">
+      
+ <div class="row" style="margin: 2px;">
+ <div class="col-md-3" style="padding-left: 12px;">
+    
+        <div class="input-group">
+          <input type="text" class="form-control" ng-model="PoiName" placeholder="Search POI name...">
+          <span class="input-group-btn">
+             
+            <button class="btn btn-info" type="button" ng-click="searchPoi()">Go!</button>
+          
+          </span>
+        </div>
+      </div>
+      <div class="col-md-7"></div>
+      <div class="col-md-1" style="margin-left: 15px">
+          <button type="button" class="btn btn-danger" ng-click=getAllPOI() style="width:80px;height: 35px;">Reset </button>
+      </div>
+      
+     
+    
+  </div>
+ 
+
+
+
+</div>
+
+  
+  <div class="text-center">
+      
+    <poimain ng-repeat="poi in pois" >
+       
+        </poimain>
+     
+      </div>
+        
+     
+       
+    
+
+

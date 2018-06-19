@@ -1,0 +1,50 @@
+
+
+<div class="text-center">
+
+   
+        <div class="thumbnail" style="margin-right: 3px;margin-left: 3px;">
+       
+                <div class="row">
+                <div class="col-md-3"  style="padding-top: 3px; padding-left: 33px;"><h4 style="display: inline">For filtering by category Check: </h4>
+               <input type="checkbox" ng-model="checked" style="margin-left: 12px" aria-label="Toggle ngShow">
+             </div>
+               <div class="col-md-2" style="padding-top: 5px">
+                 <div class="form-group" ng-show="checked"> 
+                     <select id="selectbasic" name="selectbasic" class="form-control" ng-model="selected">
+                         <option  ng-repeat="x in categories" value={{x}}>{{x}}</option>
+                     </select>  
+                 </div>
+               </div>
+               <div class="col-md-2" style="padding-top: 3px">
+                 <h4 ng-show="checkSelected() && checked" style="color: rgb(207, 207, 207)"> Filtering by {{selected}} </h4>
+               </div>
+               <div class="col-md-1"  style="padding-top: 8px">
+                 <button type="button" class="btn btn-danger" ng-show="checkSelected() && checked" ng-click=presentPOISInit()>Reset fillter</button>
+               </div>
+               <div class="col-md-1" >
+                 </div>
+               <div class="col-md-1"  style="padding-top: 8px;margin-right:5px; ">
+                 <button type="button" class="btn btn-info" ng-click=RankSort()>Rank Sort</button>
+               </div>
+               <div class="col-md-1"  style="padding-top: 8px;margin-right:5px; ">
+                <button type="button" class="btn btn-info" ng-click=MySortClick()>My Sort</button>
+              </div>      
+                 </div>
+        </div>
+        <div class="thumbnail">
+       
+          <div class="row">
+          <div class="col-md-3" >
+            <button type="button" class="btn btn-info" ng-click=SaveToDB()>Save my Favorites POIS to DB</button>
+        </div>      
+           </div>
+  </div>
+    
+           
+           
+        <favpoi ng-repeat="poi in Favorites" >
+         </favpoi>
+
+
+</div>

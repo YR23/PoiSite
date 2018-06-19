@@ -1,0 +1,63 @@
+
+ <div class="text-center">
+    <div class="row">
+        <div class="col-md-4">
+          <p>
+          <h2 style="display: inline">Welcome to</h2> 
+          <h2 style="color: red;display: inline">B</h2>
+          <h2 style="color: blue;display: inline">a</h2>
+          <h2 style="color: red;display: inline">r</h2>
+          <h2 style="color: blue;display: inline">c</h2>
+          <h2 style="color: red;display: inline">e</h2>
+          <h2 style="color: blue;display: inline">l</h2>
+          <h2 style="color: red;display: inline">o</h2>
+          <h2 style="color: blue;display: inline">n</h2>
+          <h2 style="color: red;display: inline">a</h2>
+          <h2 style="color: blue;display: inline">!</h2>
+        </p>
+            <h3>
+                Barcelona  is a city in Spain.
+            </br> It is the capital and largest city of Catalonia, as well as the second most populous municipality of Spain.
+          </br> With a population of 1.6 million within city limits, its urban area extends to numerous neighbouring municipalities within the Province of Barcelona and is home to around 4.8 million people, making it the sixth most populous urban area in the European Union after Paris, London, Madrid, the Ruhr area and Milan.
+        </br>It is the largest metropolis on the Mediterranean Sea, located on the coast between the mouths of the rivers Llobregat and Besòs, and bounded to the west by the Serra de Collserola mountain range, the tallest peak of which is 512 metres (1,680 feet) high.
+        Founded as a Roman city, in the Middle Ages Barcelona became the capital of the County of Barcelona. After merging with the Kingdom of Aragon, Barcelona continued to be an important city in the Crown of Aragon as an economic and administrative centre of this Crown.      
+      </h3>
+        </div>
+        <div class="col-md-8">
+          <div class="row">  
+                  <div class="col-md-4" ng-repeat="barca in left">
+                    <div class="thumbnail">
+                      <img src="{{barca.image}}" >
+                      <div class="caption">
+                        <h3>{{barca.title}}</h3>
+                        <p>{{barca.description}}</p>
+                      </div>
+                    </div>
+                  </div>
+                
+          </div>
+          <div class="row">  
+              <div class="col-md-4" ng-repeat="barca in right">
+                <div class="thumbnail">
+                  <img src="{{barca.image}}" >
+                  <div class="caption">
+                    <h3>{{barca.title}}</h3>
+                    <p>{{barca.description}}</p>
+                  </div>
+                </div>
+              </div>
+            
+      </div>
+
+            
+
+                
+              
+        </div>
+        
+  
+     
+    
+  </div>
+  
+</div>
